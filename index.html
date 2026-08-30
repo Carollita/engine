@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Engine - Plataforma para Auxílio Inicial ao Ensino de Língua Inglesa</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+
+<header>
+ <div class="logo">
+  <div class="logo-text">
+   <strong>ENGine</strong>
+  </div>
+ </div>
+
+ <nav>
+  <button onclick="goHome()">🏠 Tela Inicial</button>
+  <button onclick="showAchievements()">🏆 Conquistas</button>
+ </nav>
+</header>
+
+<div class="container">
+
+<div id="home">
+
+ <div class="hero">
+
+  <div class="hero-card">
+
+   <h1>
+    Todo grande aprendizado começa com um primeiro passo. Comece sua jornada no inglês!
+   </h1>
+
+   <p>
+    Aprenda com vocabulário,
+    gramática, leitura, escuta e desafios.
+   </p>
+
+   <div class="hero-buttons">
+    <button class="btn btn-primary" onclick="showModules()">
+     Iniciar
+    </button>
+    </button>
+   </div>
+  </div>
+
+  <div class="profile">
+
+   <div class="profile-top">
+    <div class="avatar">👩‍🎓</div>
+    <div class="avatar">👨‍🎓</div>
+
+    <div class="profile-name">
+    </div>
+   </div>
+   
+   <strong>Área do estudante</strong>
+
+   <div class="level-info">
+    <span>Nível <b id="level">1</b></span>
+    <span><b id="xpText">0</b> / 300 XP</span>
+   </div>
+
+   <div class="progress">
+    <div id="xpBar" class="progress-bar"></div>
+   </div>
+
+   <div class="stats">
+
+   <div class="stat">
+     <strong id="streak">0</strong>
+     <span>📈 Sequência</span>
+    </div>
+
+    <br>
+
+    <div class="stat">
+     <strong id="stars">0</strong>
+     <span>🥇 Medalhas</span>
+    </div>
+
+   </div>
+  </div>
+ </div>
+
+ <div class="section-title">
+  <h2>Módulos de ensino</h2>
+ </div>
+
+ <div id="moduleList" class="modules"></div>
+</div>
+
+
+<div id="moduleScreen" class="module-screen">
+
+ <div class="module-header">
+
+  <button class="back" onclick="goHome()">← Voltar</button>
+
+  <h1 id="moduleTitle"></h1>
+
+  <p id="moduleDescription"></p>
+
+   <p id="moduleBNCC"></p>
+
+ </div>
+
+ <div class="content-box">
+
+  <p id="moduleContent"></p>
+
+  <div class="example" id="moduleExample"></div>
+
+ </div>
+
+ <div class="section-title">
+  <h2>Vocabulário</h2>
+  <p>
+   Clique em 🔊 para escutar o áudio.
+   O da primeira palavra é reproduzido automaticamente para demonstração.
+  </p>
+ </div>
+
+ <div id="wordList" class="word-grid"></div>
+
+ <div class="game-box">
+
+  <div class="game-title">
+   <span>🃏</span>
+   <h2>Flashcards</h2>
+  </div>
+
+  <p class="game-description">
+   Clique no cartão para revelar a tradução.
+  </p>
+
+  <div id="flashcard" class="flashcard" onclick="flipFlashcard()">
+   <strong id="flashWord"></strong>
+   <span id="flashMeaning">Clique para revelar</span>
+  </div>
+
+  <button class="btn btn-primary" onclick="nextFlashcard()">
+   Próxima palavra →
+  </button>
+
+ </div>
+
+
+ <div class="game-box">
+
+  <div class="game-title">
+   <span>🧩</span>
+   <h2>Jogo de associação</h2>
+  </div>
+
+  <p class="game-description">
+   Encontre os pares entre inglês e português.
+  </p>
+
+  <div id="matchGame" class="match-grid"></div>
+
+ </div>
+
+
+ <div class="game-box">
+
+  <div class="game-title">
+   <span>🎯</span>
+   <h2>Desafio do módulo</h2>
+  </div>
+
+  <p class="game-description">
+   Responda às 10 questões e acumule XP.
+  </p>
+
+  <div id="quizArea"></div>
+
+ </div>
+
+
+ <div style="text-align:center;margin-top:30px">
+
+  <button class="btn btn-green" onclick="finishModule()">
+   🚀 Concluir +100 XP
+  </button>
+
+ </div>
+
+</div>
+
+
+<div id="achievementScreen" class="module-screen">
+
+ <div class="module-header">
+
+  <button class="back" onclick="goHome()">← Voltar</button>
+
+  <h1>🏆 Conquistas</h1>
+
+  <p>
+   Continue aprendendo para desbloquear todas as conquistas!
+  </p>
+
+ </div>
+
+ <div id="achievementList" class="achievements"></div>
+
+</div>
+
+</div>
+
+<footer>
+ ©2026
+ <br>
+ Imagens por: Unsplash
+ <br>
+ Plataforma para Auxílio Inicial ao Ensino de Língua Inglesa
+</footer>
+
+<div id="reward" class="reward">
+ <strong id="rewardTitle">🎉 Recompensa!</strong>
+ <p id="rewardText"></p>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
